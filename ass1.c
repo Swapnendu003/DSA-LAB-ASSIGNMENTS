@@ -12,6 +12,17 @@ int main() {
     int size = 0;
     int choice, element;
 
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    // Dynamically allocate memory for the array
+    arr = (int*)malloc(size * sizeof(int));
+
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
     do {
         printf("\n------- Menu -------\n");
         printf("1. Insert element\n");
